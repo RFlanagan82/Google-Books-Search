@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -8,9 +9,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static("client/build"));
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
@@ -30,12 +34,18 @@ connection.on("error", (err) => {
     console.log("Mongoose connection error: ", err);
 });
 
+//Validate a connection to the server.
 app.get("/api/config", (req, res) => {
     res.json ({
         success: true,
     });
 });
 
+//Wildcard Route
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
+
 app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on http://localhost:${PORT}!`);
+  console.log(`App is running on http://localhost:${PORT}!`);
 });
