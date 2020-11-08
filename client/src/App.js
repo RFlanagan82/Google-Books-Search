@@ -6,6 +6,7 @@ import "./App.css";
 import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Search from "./pages/Search";
 
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
         <Navbar />
         <Jumbotron />
         <Switch>
-        {/* <Route exact path="/" component={Search} />
-          <Route exact path="/about" component={Saved} /> */}
+        <Route exact path="/" component={Search} />
+          {/* <Route exact path="/about" component={Saved} /> */}
         </Switch>
       </div>
     </Router>
