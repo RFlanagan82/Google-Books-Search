@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import axios from "axios";
 import Container from "../components/Container/Container";
 import Row from "../components/Row/Row";
-import StoredBookCard from "../components/StoredBookCard/StoredBookCard";
+import SearchReturnCard from "../components/SearchReturnCard/SearchReturnCard";
 import NoBookCard from "../components/NoBookCard/NoBookCard";
 import Notification from "../components/Notification/Notification";
 
@@ -11,7 +11,7 @@ const Search = () => {
     const [searchCategory, setSearchCategory] = useState("");
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const [messageDisplay, setMessageDisplay] = useState("card mb-3 hide");
+    const [message, setMessage] = useState("card mb-3 hide");
     const [notificationMessage, setNotificationMessage] = useState({
       class: "",
       style: "",
@@ -48,7 +48,7 @@ const Search = () => {
       setSearchCategory("");
       setSearchQuery("");
       setSearchResults([]);
-      setMessageDisplay("card mb-3 hide");
+      setMessage("card mb-3 hide");
       setNotificationMessage({
         class: "",
         style: "",
@@ -65,7 +65,7 @@ const Search = () => {
         .then((res) => {
           if (res.data.totalItems === 0) {
             setSearchResults([]);
-            setMessageDisplay("card mb-3 show");
+            setMessage("card mb-3 show");
           } else {
             setSearchResults(res.data.items);
           }
@@ -81,7 +81,7 @@ const Search = () => {
         .then((res) => {
           if (res.data.totalItems === 0) {
             setSearchResults([]);
-            setMessageDisplay("card mb-3 show");
+            setMessage("card mb-3 show");
           } else {
             setSearchResults(res.data.items);
           }
@@ -163,7 +163,7 @@ const Search = () => {
         <Row>
           {searchResults.length ? (
             searchResults.map((book, index) => (
-              <StoredBookCard
+              <SearchReturnCard                
                 book={book.volumeInfo}
                 key={index}
                 saveBook={saveBook}
@@ -172,7 +172,7 @@ const Search = () => {
           ) : (
             <NoBookCard
               message="Your search did not match any books."
-              className={messageDisplay}
+              className={message}
             />
           )}
         </Row>
