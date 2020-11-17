@@ -18,6 +18,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+    //bring in model elements needed for book search
     const newBookSearch = {
         title: req.body.title,
         author: req.body.author,

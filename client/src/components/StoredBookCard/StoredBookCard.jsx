@@ -3,10 +3,10 @@ import React from "react";
 const StoredBookCard = ({
   _id,
   title,
-  author,
+  authors,
   description,
   image,
-  link,
+  bookUrl,
   deleteBook,
 }) => {
 
@@ -19,11 +19,11 @@ const StoredBookCard = ({
           </div>
           <div className="col-md-10">
             <div className="card-body text-center">
-              <h5 className="card-title">{title}</h5>
-              <h6 className="card-text">Author(s): {author.join(", ")}</h6>
+              <h4 className="card-title">{title}</h4>
+              <h5 className="card-text">Author(s): {authors.join(", ")}</h5>
               <p className="card-text">{description}</p>
               <a
-                href={link}
+                href={bookUrl}
                 className="btn btn-info mr-1"
                 role="button"
                 target="blank"

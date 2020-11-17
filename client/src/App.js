@@ -5,7 +5,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Saved from "./pages/Saved";
-// import BooksArea from "./components/BooksArea/BooksArea";
+import Search from "./pages/Search";
 
 
 function App() {
@@ -25,10 +25,9 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <Jumbotron />
-        {/* <BooksArea /> */}
         <Switch>
-        {/* <Route exact path="/" component={Search} /> */}
-          <Route exact path="/about" component={Saved} />
+        <Route exact path="/" component={Search} />
+          <Route exact path="/books" component={Saved} />
         </Switch>
       </div>
     </Router>
