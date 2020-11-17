@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
-import BooksArea from "./components/BooksArea/BooksArea";
+import Saved from "./pages/Saved";
+// import BooksArea from "./components/BooksArea/BooksArea";
 
 
 function App() {
@@ -24,10 +25,10 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <Jumbotron />
-        <BooksArea />
+        {/* <BooksArea /> */}
         <Switch>
         {/* <Route exact path="/" component={Search} /> */}
-          {/* <Route exact path="/about" component={Saved} /> */}
+          <Route exact path="/about" component={Saved} />
         </Switch>
       </div>
     </Router>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Container from "../../components/Container/Container";
-import Row from "../../components/Row/Row";
 import axios from "axios";
-import SavedBookCard from "../../components/SavedBookCard/SavedBookCard";
-// import NoBooksCard from "../../components/NoBooksCard/NoBooksCard";
+import Container from "../components/Container/Container";
+import Row from "../components/Row/Row";
+import StoredBookCard from "../components/StoredBookCard/StoredBookCard";
+import NoBookCard from "../components/NoBookCard/NoBookCard";
 
 const SavedBooks = () => {
     const [books, setBook] = useState([]);
@@ -13,7 +13,8 @@ const SavedBooks = () => {
     },[]);
 
     const getBook = function() {
-        axios.get("/api/books")
+        axios
+        .get("/api/books")
         .then((res) => {
             setBook(res.data);
         })
@@ -27,7 +28,7 @@ const SavedBooks = () => {
           .delete(`/api/books/${_id}`)
           .then((response) => {
             console.log(response.data);
-            getBooks();
+            getBook();
           })
           .catch((err) => {
             console.log(err);
@@ -44,9 +45,9 @@ const SavedBooks = () => {
             </Row>
             <Row>
               {books.length ? (
-                books.map((book, index) => <SavedBookCard {...book} key={index} deleteBook={deleteBook} />)
+                books.map((book, index) => <StoredBookCard {...book} key={index} deleteBook={deleteBook} />)
               ) : (
-                <NoBooksCard message="No Saved Books" className="card mb-3"/>
+                <NoBookCard message="No Saved Books Here" className="card mb-3"/>
               )}
             </Row>
           </Container>

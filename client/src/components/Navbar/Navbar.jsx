@@ -5,7 +5,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      <i class="fas fa-book fa-2x"></i>
+      <i className="fas fa-book fa-2x"></i>
       <Link to="/" className="navbar-brand">
         - Google Books Search App
       </Link>
