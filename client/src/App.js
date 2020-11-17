@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
-import Search from "./pages/Search";
 import BooksArea from "./components/BooksArea/BooksArea";
 
 
@@ -27,7 +26,7 @@ function App() {
         <Jumbotron />
         <BooksArea />
         <Switch>
-        <Route exact path="/" component={Search} />
+        {/* <Route exact path="/" component={Search} /> */}
           {/* <Route exact path="/about" component={Saved} /> */}
         </Switch>
       </div>
