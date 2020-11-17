@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchArea from "../../components/SearchArea/SearchArea";
+import axios from "axios";
 
 
 class BooksArea extends Component {
@@ -10,6 +11,11 @@ class BooksArea extends Component {
             searchbox: ''
         }
     };
+
+    searchBook = () => {
+        axios
+        .get("https://www.googleapis.com/books/v1/volumes")
+    }
 
     handleBookSearch = (e) => {
         console.log(e.target.value);

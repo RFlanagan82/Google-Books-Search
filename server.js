@@ -41,6 +41,8 @@ app.get("/api/config", (req, res) => {
     });
 });
 
+app.use("/api/books", BookController);
+
 //Wildcard Route
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
