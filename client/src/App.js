@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useEffect } from "react";
-import "./App.css";
 import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Search from "./pages/Search";
+import BooksArea from "./components/BooksArea/BooksArea";
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <Jumbotron />
+        <BooksArea />
         <Switch>
         <Route exact path="/" component={Search} />
           {/* <Route exact path="/about" component={Saved} /> */}
