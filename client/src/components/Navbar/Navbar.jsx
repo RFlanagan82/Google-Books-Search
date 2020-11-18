@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg">
       <i className="fas fa-book fa-2x"></i>
       <Link to="/" className="navbar-brand">
-        - Google Books Search App
+      &nbsp; - My Google Books Library
       </Link>
       <button
         className="navbar-toggler"
@@ -25,7 +25,7 @@ const Navbar = () => {
           <NavLink to="/" className="nav-link">
            Search
           </NavLink>
-          <Link to="/Saved" className="navbar-brand">
+          <Link to="/Saved" className="nav-link">
            Saved
           </Link>
         </div>

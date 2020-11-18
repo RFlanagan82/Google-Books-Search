@@ -4,6 +4,7 @@ import Container from "../components/Container/Container";
 import Row from "../components/Row/Row";
 import StoredBookCard from "../components/StoredBookCard/StoredBookCard";
 import NoBookCard from "../components/NoBookCard/NoBookCard";
+import "./Saved.css";
 
 const SavedBooks = () => {
     const [books, setBooks] = useState([]);
@@ -39,8 +40,8 @@ const SavedBooks = () => {
         <>
           <Container>
             <Row>
-              <div className="col-sm-12 text-center my-5">
-                <h1>My Saved Book Library</h1>
+              <div className="col-sm-12 text-center my-5 savedtext">
+                <h1><b>My Saved Book Library</b></h1>
               </div>
             </Row>
             <Row>

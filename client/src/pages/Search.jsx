@@ -5,6 +5,7 @@ import Row from "../components/Row/Row";
 import SearchReturnCard from "../components/SearchReturnCard/SearchReturnCard";
 import NoBookCard from "../components/NoBookCard/NoBookCard";
 import Notification from "../components/Notification/Notification";
+import "./Search.css";
 
 
 const Search = () => {
@@ -114,7 +115,7 @@ const Search = () => {
            <Container>
         <Row>
           <div className="col-sm-2"></div>
-          <div className="col-sm-8">
+          <div className="col-sm-8 searchtext">
             <form
               id="search-form"
               className="bg-light p-4 my-4 text-center"
