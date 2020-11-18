@@ -14,7 +14,7 @@ const BookSchema = new Schema({
   image: {
       type: String,
   },
-  bookUrl: {
+  link: {
       type: String,
   }
 });

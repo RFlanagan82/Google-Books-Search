@@ -8,18 +8,9 @@ import Saved from "./pages/Saved";
 import Search from "./pages/Search";
 
 
+
 function App() {
-  useEffect(() => {
-    console.log("Make an API call");
-    axios
-      .get("/api/config")
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+ 
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
@@ -27,7 +18,7 @@ function App() {
         <Jumbotron />
         <Switch>
         <Route exact path="/" component={Search} />
-          <Route exact path="/books" component={Saved} />
+          <Route exact path="/Saved" component={Saved} />
         </Switch>
       </div>
     </Router>

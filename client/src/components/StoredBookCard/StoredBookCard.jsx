@@ -6,7 +6,7 @@ const StoredBookCard = ({
   authors,
   description,
   image,
-  bookUrl,
+  link,
   deleteBook,
 }) => {
 
@@ -20,10 +20,10 @@ const StoredBookCard = ({
           <div className="col-md-10">
             <div className="card-body text-center">
               <h4 className="card-title">{title}</h4>
-              <h5 className="card-text">Author(s): {authors.join(", ")}</h5>
+              <h5 className="card-text">Author(s):{authors.join(", ")}</h5>
               <p className="card-text">{description}</p>
               <a
-                href={bookUrl}
+                href={link}
                 className="btn btn-info mr-1"
                 role="button"
                 target="blank"

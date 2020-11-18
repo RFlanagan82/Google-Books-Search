@@ -16,7 +16,7 @@ const SearchReturnCard = ( { book, saveBook }) => {
             <div className="card-body text-center">
               <h5 className="card-title">{book.title ? book.title : "No Title"}</h5>
               <h6 className="card-text">
-                Author(s): {book.authors ? book.authors.join(", ") : []}
+                Author(s): {book.authors ? book.authors.join (", ") : []}
               </h6>
               <p className="card-text">{book.description ? book.description : ""}</p>
               <a

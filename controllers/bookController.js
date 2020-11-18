@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models");
+const db = require("../client/src/models");
 
 router.get("/", (req, res) => {
   db.Book.find({})
@@ -22,9 +22,9 @@ router.post("/", (req, res) => {
     const newBookSearch = {
         title: req.body.title,
         author: req.body.author,
-        description: req.body, description,
+        description: req.body.description,
         image: req.body.image,
-        link: req.body.link
+        link: req.body.link,
     };
     db.Book.create(newBookSearch)
     .then((newBookSearch) => res.json(newBookSearch))
@@ -51,3 +51,5 @@ router.delete("/:id", (req,res) => {
         });
     });
 });
+
+module.exports = router;

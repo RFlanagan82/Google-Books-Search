@@ -6,17 +6,17 @@ import StoredBookCard from "../components/StoredBookCard/StoredBookCard";
 import NoBookCard from "../components/NoBookCard/NoBookCard";
 
 const SavedBooks = () => {
-    const [books, setBook] = useState([]);
+    const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        getBook();
+        getBooks();
     },[]);
 
-    const getBook = function() {
+    const getBooks = function() {
         axios
         .get("/api/books")
-        .then((res) => {
-            setBook(res.data);
+        .then((response) => {
+            setBooks(response.data);
         })
         .catch((err) => {
             console.log(err);
@@ -28,7 +28,7 @@ const SavedBooks = () => {
           .delete(`/api/books/${_id}`)
           .then((response) => {
             console.log(response.data);
-            getBook();
+            getBooks();
           })
           .catch((err) => {
             console.log(err);
