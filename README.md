@@ -1,11 +1,13 @@
 # Google-Books-Search
-
+![](./client/src/images/google_books_library.png)
 
 ## Description
+This is a full stack MERN application that uses the Google Books API to help users search for, learn about, save or delete books they've pinned.
 
+## Deployed Link
+Check out out by going [here](https://google-books-search-rf.herokuapp.com/).
 
 ## Installation
-
 1. Follow the GitHub Repository Link in the links section below.
 2. Clone the repository using an SSH key.
 3. Open Terminal or GitBash and use "git clone" to clone the repository.
@@ -15,12 +17,11 @@
 
 Feel free to review and edit your own copy in VScode after install.
 
-This is a full stack MERN app. All files and components are included.
+All files and components are included.
 
-Application is deployed on Heroku.
+Application is deployed on Heroku. [Reference the link above]
 
 ## Resources
-
 * Heroku
 * MongoDB Atlas
 * Express
@@ -28,6 +29,9 @@ Application is deployed on Heroku.
 * Bootstrap
 * React
 * Node
+
+## Challenges
+Mainly querying the API and getting the routes done right.
 ## Badge
 ![](https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green)
 ## Contact
