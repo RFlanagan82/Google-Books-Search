@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const SearchReturnCard = ( { book, saveBook }) => {
     return (
@@ -31,7 +32,10 @@ const SearchReturnCard = ( { book, saveBook }) => {
                 className="btn btn-info ml-1"
                 onClick={(e) => saveBook(e, book)}
               >
+                <Link to="/Saved" className="btn-info mr-1">
                 Save Book
+                </Link>
+                
               </button>
             </div>
           </div>
