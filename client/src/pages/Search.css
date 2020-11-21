@@ -1,3 +1,5 @@
 .searchtext {
     font-family: 'Raleway', sans-serif;
+    border: 5px;
+    border-style: groove;
 }

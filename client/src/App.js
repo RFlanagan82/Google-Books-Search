@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Saved from "./pages/Saved";
 import Search from "./pages/Search";
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
 
